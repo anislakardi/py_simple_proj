@@ -1,0 +1,2 @@
+def Spin(timesspin):
+    symbols = ['🍍', '🍒', '🥑', '🍇', '🍉']
