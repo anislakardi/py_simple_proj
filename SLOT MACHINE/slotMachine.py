@@ -12,8 +12,7 @@ while True:
         break
     elif choise.upper() == "Y":
         timesOfSpin = int(input("place your bet (1$ for One Spin): "))
-        score = functionSlotMachine.Spin(timesOfSpin)
-        score += score
+        balance += int(functionSlotMachine.Spin(timesOfSpin))
     else:
         print("invalid input")
         break
