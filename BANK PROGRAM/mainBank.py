@@ -23,7 +23,7 @@ while True:
     elif choise == "2":
         balance += funBank.deposit()
     elif choise == "3":
-        balance -= funBank.withdraw()
+        balance -= funBank.withdraw(balance)
     else:
         print("INVALID INPUT")
 print("BYE")
