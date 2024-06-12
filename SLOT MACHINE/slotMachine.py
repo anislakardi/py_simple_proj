@@ -19,7 +19,7 @@ while True:
 print()
 print()
 print("**********************************")
-print(f"GAMO OVER! your balance is: {balance}")
+print(f"GAMO OVER! your balance is: {balance}$")
 print("**********************************")
 
 

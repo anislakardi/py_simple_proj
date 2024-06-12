@@ -11,7 +11,9 @@ def Spin(timesspin):
         print("spinning...")
         time.sleep(3)
         print()
-        print(f"{pos1}|{pos2}|{pos3}")
+        print("******************")
+        print(f"     {pos1}|{pos2}|{pos3}")
+        print("******************")
         if pos1 == pos2 and pos2 == pos3:
             bet += 50
             print("YOU WIN !")
