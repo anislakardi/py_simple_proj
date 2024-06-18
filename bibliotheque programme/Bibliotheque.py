@@ -1,24 +1,23 @@
 import Section
-import Livre
 
-class Bivliotheque:
-    lesSection = []
-    maximum = 0
-    Nom = ""
-    def __init__(self , nom , localisation):
+class Bibliotheque:
+    def __init__(self, nom, localisation):
         self.nom = nom
         self.localisation = localisation
-        self.Nom =nom
-
+        self.lesSections = []
+        self.maximum = 0
+        self.Sec = None
 
     def ajouterSection(self, sec):
-        self.lesSection.append(sec)
+        self.lesSections.append(sec)
 
     def section_plus_grande(self):
-        for x in self.lesSection:
-            if self.maximum < x.totalPages:
-                self.maximum = x.totalPages
-                self.Sec = x
+        for section in self.lesSections:
+            if section.totalPages > self.maximum:
+                self.maximum = section.totalPages
+                self.Sec = section
 
-        print(f"La section qui avez la plus grande nombre de pages dans la bibliotheque: {self.Nom} est :"
-              f" {self.Sec.nom}")
+        if self.Sec:
+            print(f"La section qui a le plus grand nombre de pages dans la bibliotheque {self.nom} est : {self.Sec.nom}")
+        else:
+            print(f"Aucune section trouvée dans la bibliotheque {self.nom}")
