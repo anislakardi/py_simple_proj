@@ -1,8 +1,8 @@
 class Entreprise:
     Employees = []
     total = 0
-    def __init__(self):
-        pass
+    def __init__(self, name):
+        self.name = name
     def ajouter(self, emp):
         self.Employees.append(emp)
 
