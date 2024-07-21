@@ -1,76 +1,42 @@
 
 
+def kifKif(word1, word2):
+    return 1 if word1 in word2 else 0
+
+
 def wordOrder(NumberWords):
     words = []
+    newWords = []
     wordTest = []
     repeetTotal = []
-    outputstring = []
+    outputstring = ""
     for i in range(NumberWords):
-        words.append(input(f"please enter the word number {i+1}: "))
-
-    for i in range(NumberWords):
-        wordTest = words[i]
+       #words.append(input(f"please enter the word number {i+1}: "))
+       words.append(input())
+    for x in words:
+        if x not in newWords:
+            newWords.append(x)
+    for i in range(len(newWords)):
+        wordTest = newWords[i]
         repeat = 0
-        j = 0
-        for j in range(NumberWords):
-            word = words[j]
-            if i != j:
-                 if len(wordTest) > len(word):
-                     repeat = 0
-                     break
-                 elif wordTest == word:
-                     repeat += 1
-                 else:
-                     k = 0
-                     counter = 0
-                     while k != len(word):
-                         if wordTest[counter] == word[k]:
-                             counter += 1
-                         else:
-                             counter = 0
-                         if counter == len(wordTest):
-                             repeat += 1
-                             break
-                         k += 1
+        j = i
+        for j in range(i+1, NumberWords):
+            word = words[j-1]
 
+            repeat += kifKif(wordTest, word)
         if repeat != 0:
             repeetTotal.append(repeat)
 
 
-
     print(f"{len(repeetTotal)}")
     for x in repeetTotal:
-        print(x)
-        outputstring = str(x) + " "
+        outputstring += str(x) + " "
     print(outputstring)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# main programme
 while True:
-    num = input("Please enter number of words (x>0): ")
+    #num = input("Please enter number of words (x>0): ")
+    num = input()
     if int(num) > 0:
         break
     else:
